@@ -1,0 +1,1392 @@
+
+/challenge/babymem_level5.1:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000401000 <_init>:
+  401000:	    f3 0f 1e fa          	endbr64 
+  401004:	    48 83 ec 08          	sub    rsp,0x8
+  401008:	    48 8b 05 e9 2f 00 00 	mov    rax,QWORD PTR [rip+0x2fe9]        # 403ff8 <__gmon_start__>
+  40100f:	    48 85 c0             	test   rax,rax
+  401012:	/-- 74 02                	je     401016 <_init+0x16>
+  401014:	|   ff d0                	call   rax
+  401016:	\-> 48 83 c4 08          	add    rsp,0x8
+  40101a:	    c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000401020 <.plt>:
+  401020:	/-> ff 35 e2 2f 00 00    	push   QWORD PTR [rip+0x2fe2]        # 404008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  401026:	|   f2 ff 25 e3 2f 00 00 	bnd jmp QWORD PTR [rip+0x2fe3]        # 404010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40102d:	|   0f 1f 00             	nop    DWORD PTR [rax]
+  401030:	|   f3 0f 1e fa          	endbr64 
+  401034:	|   68 00 00 00 00       	push   0x0
+  401039:	+-- f2 e9 e1 ff ff ff    	bnd jmp 401020 <.plt>
+  40103f:	|   90                   	nop
+  401040:	|   f3 0f 1e fa          	endbr64 
+  401044:	|   68 01 00 00 00       	push   0x1
+  401049:	+-- f2 e9 d1 ff ff ff    	bnd jmp 401020 <.plt>
+  40104f:	|   90                   	nop
+  401050:	|   f3 0f 1e fa          	endbr64 
+  401054:	|   68 02 00 00 00       	push   0x2
+  401059:	+-- f2 e9 c1 ff ff ff    	bnd jmp 401020 <.plt>
+  40105f:	|   90                   	nop
+  401060:	|   f3 0f 1e fa          	endbr64 
+  401064:	|   68 03 00 00 00       	push   0x3
+  401069:	+-- f2 e9 b1 ff ff ff    	bnd jmp 401020 <.plt>
+  40106f:	|   90                   	nop
+  401070:	|   f3 0f 1e fa          	endbr64 
+  401074:	|   68 04 00 00 00       	push   0x4
+  401079:	+-- f2 e9 a1 ff ff ff    	bnd jmp 401020 <.plt>
+  40107f:	|   90                   	nop
+  401080:	|   f3 0f 1e fa          	endbr64 
+  401084:	|   68 05 00 00 00       	push   0x5
+  401089:	+-- f2 e9 91 ff ff ff    	bnd jmp 401020 <.plt>
+  40108f:	|   90                   	nop
+  401090:	|   f3 0f 1e fa          	endbr64 
+  401094:	|   68 06 00 00 00       	push   0x6
+  401099:	+-- f2 e9 81 ff ff ff    	bnd jmp 401020 <.plt>
+  40109f:	|   90                   	nop
+  4010a0:	|   f3 0f 1e fa          	endbr64 
+  4010a4:	|   68 07 00 00 00       	push   0x7
+  4010a9:	+-- f2 e9 71 ff ff ff    	bnd jmp 401020 <.plt>
+  4010af:	|   90                   	nop
+  4010b0:	|   f3 0f 1e fa          	endbr64 
+  4010b4:	|   68 08 00 00 00       	push   0x8
+  4010b9:	+-- f2 e9 61 ff ff ff    	bnd jmp 401020 <.plt>
+  4010bf:	|   90                   	nop
+  4010c0:	|   f3 0f 1e fa          	endbr64 
+  4010c4:	|   68 09 00 00 00       	push   0x9
+  4010c9:	+-- f2 e9 51 ff ff ff    	bnd jmp 401020 <.plt>
+  4010cf:	|   90                   	nop
+  4010d0:	|   f3 0f 1e fa          	endbr64 
+  4010d4:	|   68 0a 00 00 00       	push   0xa
+  4010d9:	+-- f2 e9 41 ff ff ff    	bnd jmp 401020 <.plt>
+  4010df:	|   90                   	nop
+  4010e0:	|   f3 0f 1e fa          	endbr64 
+  4010e4:	|   68 0b 00 00 00       	push   0xb
+  4010e9:	+-- f2 e9 31 ff ff ff    	bnd jmp 401020 <.plt>
+  4010ef:	|   90                   	nop
+  4010f0:	|   f3 0f 1e fa          	endbr64 
+  4010f4:	|   68 0c 00 00 00       	push   0xc
+  4010f9:	\-- f2 e9 21 ff ff ff    	bnd jmp 401020 <.plt>
+  4010ff:	    90                   	nop
+
+Disassembly of section .plt.sec:
+
+0000000000401100 <putchar@plt>:
+  401100:	f3 0f 1e fa          	endbr64 
+  401104:	f2 ff 25 0d 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f0d]        # 404018 <putchar@GLIBC_2.2.5>
+  40110b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401110 <__errno_location@plt>:
+  401110:	f3 0f 1e fa          	endbr64 
+  401114:	f2 ff 25 05 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f05]        # 404020 <__errno_location@GLIBC_2.2.5>
+  40111b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401120 <puts@plt>:
+  401120:	f3 0f 1e fa          	endbr64 
+  401124:	f2 ff 25 fd 2e 00 00 	bnd jmp QWORD PTR [rip+0x2efd]        # 404028 <puts@GLIBC_2.2.5>
+  40112b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401130 <write@plt>:
+  401130:	f3 0f 1e fa          	endbr64 
+  401134:	f2 ff 25 f5 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ef5]        # 404030 <write@GLIBC_2.2.5>
+  40113b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401140 <printf@plt>:
+  401140:	f3 0f 1e fa          	endbr64 
+  401144:	f2 ff 25 ed 2e 00 00 	bnd jmp QWORD PTR [rip+0x2eed]        # 404038 <printf@GLIBC_2.2.5>
+  40114b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401150 <__assert_fail@plt>:
+  401150:	f3 0f 1e fa          	endbr64 
+  401154:	f2 ff 25 e5 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ee5]        # 404040 <__assert_fail@GLIBC_2.2.5>
+  40115b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401160 <geteuid@plt>:
+  401160:	f3 0f 1e fa          	endbr64 
+  401164:	f2 ff 25 dd 2e 00 00 	bnd jmp QWORD PTR [rip+0x2edd]        # 404048 <geteuid@GLIBC_2.2.5>
+  40116b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401170 <read@plt>:
+  401170:	f3 0f 1e fa          	endbr64 
+  401174:	f2 ff 25 d5 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ed5]        # 404050 <read@GLIBC_2.2.5>
+  40117b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401180 <setvbuf@plt>:
+  401180:	f3 0f 1e fa          	endbr64 
+  401184:	f2 ff 25 cd 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ecd]        # 404058 <setvbuf@GLIBC_2.2.5>
+  40118b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000401190 <open@plt>:
+  401190:	f3 0f 1e fa          	endbr64 
+  401194:	f2 ff 25 c5 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ec5]        # 404060 <open@GLIBC_2.2.5>
+  40119b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000004011a0 <__isoc99_scanf@plt>:
+  4011a0:	f3 0f 1e fa          	endbr64 
+  4011a4:	f2 ff 25 bd 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ebd]        # 404068 <__isoc99_scanf@GLIBC_2.7>
+  4011ab:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000004011b0 <exit@plt>:
+  4011b0:	f3 0f 1e fa          	endbr64 
+  4011b4:	f2 ff 25 b5 2e 00 00 	bnd jmp QWORD PTR [rip+0x2eb5]        # 404070 <exit@GLIBC_2.2.5>
+  4011bb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000004011c0 <strerror@plt>:
+  4011c0:	f3 0f 1e fa          	endbr64 
+  4011c4:	f2 ff 25 ad 2e 00 00 	bnd jmp QWORD PTR [rip+0x2ead]        # 404078 <strerror@GLIBC_2.2.5>
+  4011cb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .text:
+
+00000000004011d0 <_start>:
+  4011d0:	f3 0f 1e fa          	endbr64 
+  4011d4:	31 ed                	xor    ebp,ebp
+  4011d6:	49 89 d1             	mov    r9,rdx
+  4011d9:	5e                   	pop    rsi
+  4011da:	48 89 e2             	mov    rdx,rsp
+  4011dd:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+  4011e1:	50                   	push   rax
+  4011e2:	54                   	push   rsp
+  4011e3:	49 c7 c0 70 1a 40 00 	mov    r8,0x401a70
+  4011ea:	48 c7 c1 00 1a 40 00 	mov    rcx,0x401a00
+  4011f1:	48 c7 c7 08 19 40 00 	mov    rdi,0x401908
+  4011f8:	ff 15 f2 2d 00 00    	call   QWORD PTR [rip+0x2df2]        # 403ff0 <__libc_start_main@GLIBC_2.2.5>
+  4011fe:	f4                   	hlt    
+  4011ff:	90                   	nop
+
+0000000000401200 <_dl_relocate_static_pie>:
+  401200:	f3 0f 1e fa          	endbr64 
+  401204:	c3                   	ret    
+  401205:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+  40120c:	00 00 00 
+  40120f:	90                   	nop
+
+0000000000401210 <deregister_tm_clones>:
+  401210:	    b8 90 40 40 00       	mov    eax,0x404090
+  401215:	    48 3d 90 40 40 00    	cmp    rax,0x404090
+  40121b:	/-- 74 13                	je     401230 <deregister_tm_clones+0x20>
+  40121d:	|   b8 00 00 00 00       	mov    eax,0x0
+  401222:	|   48 85 c0             	test   rax,rax
+  401225:	+-- 74 09                	je     401230 <deregister_tm_clones+0x20>
+  401227:	|   bf 90 40 40 00       	mov    edi,0x404090
+  40122c:	|   ff e0                	jmp    rax
+  40122e:	|   66 90                	xchg   ax,ax
+  401230:	\-> c3                   	ret    
+  401231:	    66 66 2e 0f 1f 84 00 	data16 nop WORD PTR cs:[rax+rax*1+0x0]
+  401238:	00 00 00 00 
+  40123c:	    0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000401240 <register_tm_clones>:
+  401240:	    be 90 40 40 00       	mov    esi,0x404090
+  401245:	    48 81 ee 90 40 40 00 	sub    rsi,0x404090
+  40124c:	    48 89 f0             	mov    rax,rsi
+  40124f:	    48 c1 ee 3f          	shr    rsi,0x3f
+  401253:	    48 c1 f8 03          	sar    rax,0x3
+  401257:	    48 01 c6             	add    rsi,rax
+  40125a:	    48 d1 fe             	sar    rsi,1
+  40125d:	/-- 74 11                	je     401270 <register_tm_clones+0x30>
+  40125f:	|   b8 00 00 00 00       	mov    eax,0x0
+  401264:	|   48 85 c0             	test   rax,rax
+  401267:	+-- 74 07                	je     401270 <register_tm_clones+0x30>
+  401269:	|   bf 90 40 40 00       	mov    edi,0x404090
+  40126e:	|   ff e0                	jmp    rax
+  401270:	\-> c3                   	ret    
+  401271:	    66 66 2e 0f 1f 84 00 	data16 nop WORD PTR cs:[rax+rax*1+0x0]
+  401278:	00 00 00 00 
+  40127c:	    0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000401280 <__do_global_dtors_aux>:
+  401280:	    f3 0f 1e fa          	endbr64 
+  401284:	    80 3d 2d 2e 00 00 00 	cmp    BYTE PTR [rip+0x2e2d],0x0        # 4040b8 <completed.8060>
+  40128b:	/-- 75 13                	jne    4012a0 <__do_global_dtors_aux+0x20>
+  40128d:	|   55                   	push   rbp
+  40128e:	|   48 89 e5             	mov    rbp,rsp
+  401291:	|   e8 7a ff ff ff       	call   401210 <deregister_tm_clones>
+  401296:	|   c6 05 1b 2e 00 00 01 	mov    BYTE PTR [rip+0x2e1b],0x1        # 4040b8 <completed.8060>
+  40129d:	|   5d                   	pop    rbp
+  40129e:	|   c3                   	ret    
+  40129f:	|   90                   	nop
+  4012a0:	\-> c3                   	ret    
+  4012a1:	    66 66 2e 0f 1f 84 00 	data16 nop WORD PTR cs:[rax+rax*1+0x0]
+  4012a8:	00 00 00 00 
+  4012ac:	    0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+00000000004012b0 <frame_dummy>:
+  4012b0:	f3 0f 1e fa          	endbr64 
+  4012b4:	eb 8a                	jmp    401240 <register_tm_clones>
+
+00000000004012b6 <bin_padding>:
+  4012b6:	f3 0f 1e fa          	endbr64 
+  4012ba:	55                   	push   rbp
+  4012bb:	48 89 e5             	mov    rbp,rsp
+  4012be:	90                   	nop
+  4012bf:	90                   	nop
+  4012c0:	90                   	nop
+  4012c1:	90                   	nop
+  4012c2:	90                   	nop
+  4012c3:	90                   	nop
+  4012c4:	90                   	nop
+  4012c5:	90                   	nop
+  4012c6:	90                   	nop
+  4012c7:	90                   	nop
+  4012c8:	90                   	nop
+  4012c9:	90                   	nop
+  4012ca:	90                   	nop
+  4012cb:	90                   	nop
+  4012cc:	90                   	nop
+  4012cd:	90                   	nop
+  4012ce:	90                   	nop
+  4012cf:	90                   	nop
+  4012d0:	90                   	nop
+  4012d1:	90                   	nop
+  4012d2:	90                   	nop
+  4012d3:	90                   	nop
+  4012d4:	90                   	nop
+  4012d5:	90                   	nop
+  4012d6:	90                   	nop
+  4012d7:	90                   	nop
+  4012d8:	90                   	nop
+  4012d9:	90                   	nop
+  4012da:	90                   	nop
+  4012db:	90                   	nop
+  4012dc:	90                   	nop
+  4012dd:	90                   	nop
+  4012de:	90                   	nop
+  4012df:	90                   	nop
+  4012e0:	90                   	nop
+  4012e1:	90                   	nop
+  4012e2:	90                   	nop
+  4012e3:	90                   	nop
+  4012e4:	90                   	nop
+  4012e5:	90                   	nop
+  4012e6:	90                   	nop
+  4012e7:	90                   	nop
+  4012e8:	90                   	nop
+  4012e9:	90                   	nop
+  4012ea:	90                   	nop
+  4012eb:	90                   	nop
+  4012ec:	90                   	nop
+  4012ed:	90                   	nop
+  4012ee:	90                   	nop
+  4012ef:	90                   	nop
+  4012f0:	90                   	nop
+  4012f1:	90                   	nop
+  4012f2:	90                   	nop
+  4012f3:	90                   	nop
+  4012f4:	90                   	nop
+  4012f5:	90                   	nop
+  4012f6:	90                   	nop
+  4012f7:	90                   	nop
+  4012f8:	90                   	nop
+  4012f9:	90                   	nop
+  4012fa:	90                   	nop
+  4012fb:	90                   	nop
+  4012fc:	90                   	nop
+  4012fd:	90                   	nop
+  4012fe:	90                   	nop
+  4012ff:	90                   	nop
+  401300:	90                   	nop
+  401301:	90                   	nop
+  401302:	90                   	nop
+  401303:	90                   	nop
+  401304:	90                   	nop
+  401305:	90                   	nop
+  401306:	90                   	nop
+  401307:	90                   	nop
+  401308:	90                   	nop
+  401309:	90                   	nop
+  40130a:	90                   	nop
+  40130b:	90                   	nop
+  40130c:	90                   	nop
+  40130d:	90                   	nop
+  40130e:	90                   	nop
+  40130f:	90                   	nop
+  401310:	90                   	nop
+  401311:	90                   	nop
+  401312:	90                   	nop
+  401313:	90                   	nop
+  401314:	90                   	nop
+  401315:	90                   	nop
+  401316:	90                   	nop
+  401317:	90                   	nop
+  401318:	90                   	nop
+  401319:	90                   	nop
+  40131a:	90                   	nop
+  40131b:	90                   	nop
+  40131c:	90                   	nop
+  40131d:	90                   	nop
+  40131e:	90                   	nop
+  40131f:	90                   	nop
+  401320:	90                   	nop
+  401321:	90                   	nop
+  401322:	90                   	nop
+  401323:	90                   	nop
+  401324:	90                   	nop
+  401325:	90                   	nop
+  401326:	90                   	nop
+  401327:	90                   	nop
+  401328:	90                   	nop
+  401329:	90                   	nop
+  40132a:	90                   	nop
+  40132b:	90                   	nop
+  40132c:	90                   	nop
+  40132d:	90                   	nop
+  40132e:	90                   	nop
+  40132f:	90                   	nop
+  401330:	90                   	nop
+  401331:	90                   	nop
+  401332:	90                   	nop
+  401333:	90                   	nop
+  401334:	90                   	nop
+  401335:	90                   	nop
+  401336:	90                   	nop
+  401337:	90                   	nop
+  401338:	90                   	nop
+  401339:	90                   	nop
+  40133a:	90                   	nop
+  40133b:	90                   	nop
+  40133c:	90                   	nop
+  40133d:	90                   	nop
+  40133e:	90                   	nop
+  40133f:	90                   	nop
+  401340:	90                   	nop
+  401341:	90                   	nop
+  401342:	90                   	nop
+  401343:	90                   	nop
+  401344:	90                   	nop
+  401345:	90                   	nop
+  401346:	90                   	nop
+  401347:	90                   	nop
+  401348:	90                   	nop
+  401349:	90                   	nop
+  40134a:	90                   	nop
+  40134b:	90                   	nop
+  40134c:	90                   	nop
+  40134d:	90                   	nop
+  40134e:	90                   	nop
+  40134f:	90                   	nop
+  401350:	90                   	nop
+  401351:	90                   	nop
+  401352:	90                   	nop
+  401353:	90                   	nop
+  401354:	90                   	nop
+  401355:	90                   	nop
+  401356:	90                   	nop
+  401357:	90                   	nop
+  401358:	90                   	nop
+  401359:	90                   	nop
+  40135a:	90                   	nop
+  40135b:	90                   	nop
+  40135c:	90                   	nop
+  40135d:	90                   	nop
+  40135e:	90                   	nop
+  40135f:	90                   	nop
+  401360:	90                   	nop
+  401361:	90                   	nop
+  401362:	90                   	nop
+  401363:	90                   	nop
+  401364:	90                   	nop
+  401365:	90                   	nop
+  401366:	90                   	nop
+  401367:	90                   	nop
+  401368:	90                   	nop
+  401369:	90                   	nop
+  40136a:	90                   	nop
+  40136b:	90                   	nop
+  40136c:	90                   	nop
+  40136d:	90                   	nop
+  40136e:	90                   	nop
+  40136f:	90                   	nop
+  401370:	90                   	nop
+  401371:	90                   	nop
+  401372:	90                   	nop
+  401373:	90                   	nop
+  401374:	90                   	nop
+  401375:	90                   	nop
+  401376:	90                   	nop
+  401377:	90                   	nop
+  401378:	90                   	nop
+  401379:	90                   	nop
+  40137a:	90                   	nop
+  40137b:	90                   	nop
+  40137c:	90                   	nop
+  40137d:	90                   	nop
+  40137e:	90                   	nop
+  40137f:	90                   	nop
+  401380:	90                   	nop
+  401381:	90                   	nop
+  401382:	90                   	nop
+  401383:	90                   	nop
+  401384:	90                   	nop
+  401385:	90                   	nop
+  401386:	90                   	nop
+  401387:	90                   	nop
+  401388:	90                   	nop
+  401389:	90                   	nop
+  40138a:	90                   	nop
+  40138b:	90                   	nop
+  40138c:	90                   	nop
+  40138d:	90                   	nop
+  40138e:	90                   	nop
+  40138f:	90                   	nop
+  401390:	90                   	nop
+  401391:	90                   	nop
+  401392:	90                   	nop
+  401393:	90                   	nop
+  401394:	90                   	nop
+  401395:	90                   	nop
+  401396:	90                   	nop
+  401397:	90                   	nop
+  401398:	90                   	nop
+  401399:	90                   	nop
+  40139a:	90                   	nop
+  40139b:	90                   	nop
+  40139c:	90                   	nop
+  40139d:	90                   	nop
+  40139e:	90                   	nop
+  40139f:	90                   	nop
+  4013a0:	90                   	nop
+  4013a1:	90                   	nop
+  4013a2:	90                   	nop
+  4013a3:	90                   	nop
+  4013a4:	90                   	nop
+  4013a5:	90                   	nop
+  4013a6:	90                   	nop
+  4013a7:	90                   	nop
+  4013a8:	90                   	nop
+  4013a9:	90                   	nop
+  4013aa:	90                   	nop
+  4013ab:	90                   	nop
+  4013ac:	90                   	nop
+  4013ad:	90                   	nop
+  4013ae:	90                   	nop
+  4013af:	90                   	nop
+  4013b0:	90                   	nop
+  4013b1:	90                   	nop
+  4013b2:	90                   	nop
+  4013b3:	90                   	nop
+  4013b4:	90                   	nop
+  4013b5:	90                   	nop
+  4013b6:	90                   	nop
+  4013b7:	90                   	nop
+  4013b8:	90                   	nop
+  4013b9:	90                   	nop
+  4013ba:	90                   	nop
+  4013bb:	90                   	nop
+  4013bc:	90                   	nop
+  4013bd:	90                   	nop
+  4013be:	90                   	nop
+  4013bf:	90                   	nop
+  4013c0:	90                   	nop
+  4013c1:	90                   	nop
+  4013c2:	90                   	nop
+  4013c3:	90                   	nop
+  4013c4:	90                   	nop
+  4013c5:	90                   	nop
+  4013c6:	90                   	nop
+  4013c7:	90                   	nop
+  4013c8:	90                   	nop
+  4013c9:	90                   	nop
+  4013ca:	90                   	nop
+  4013cb:	90                   	nop
+  4013cc:	90                   	nop
+  4013cd:	90                   	nop
+  4013ce:	90                   	nop
+  4013cf:	90                   	nop
+  4013d0:	90                   	nop
+  4013d1:	90                   	nop
+  4013d2:	90                   	nop
+  4013d3:	90                   	nop
+  4013d4:	90                   	nop
+  4013d5:	90                   	nop
+  4013d6:	90                   	nop
+  4013d7:	90                   	nop
+  4013d8:	90                   	nop
+  4013d9:	90                   	nop
+  4013da:	90                   	nop
+  4013db:	90                   	nop
+  4013dc:	90                   	nop
+  4013dd:	90                   	nop
+  4013de:	90                   	nop
+  4013df:	90                   	nop
+  4013e0:	90                   	nop
+  4013e1:	90                   	nop
+  4013e2:	90                   	nop
+  4013e3:	90                   	nop
+  4013e4:	90                   	nop
+  4013e5:	90                   	nop
+  4013e6:	90                   	nop
+  4013e7:	90                   	nop
+  4013e8:	90                   	nop
+  4013e9:	90                   	nop
+  4013ea:	90                   	nop
+  4013eb:	90                   	nop
+  4013ec:	90                   	nop
+  4013ed:	90                   	nop
+  4013ee:	90                   	nop
+  4013ef:	90                   	nop
+  4013f0:	90                   	nop
+  4013f1:	90                   	nop
+  4013f2:	90                   	nop
+  4013f3:	90                   	nop
+  4013f4:	90                   	nop
+  4013f5:	90                   	nop
+  4013f6:	90                   	nop
+  4013f7:	90                   	nop
+  4013f8:	90                   	nop
+  4013f9:	90                   	nop
+  4013fa:	90                   	nop
+  4013fb:	90                   	nop
+  4013fc:	90                   	nop
+  4013fd:	90                   	nop
+  4013fe:	90                   	nop
+  4013ff:	90                   	nop
+  401400:	90                   	nop
+  401401:	90                   	nop
+  401402:	90                   	nop
+  401403:	90                   	nop
+  401404:	90                   	nop
+  401405:	90                   	nop
+  401406:	90                   	nop
+  401407:	90                   	nop
+  401408:	90                   	nop
+  401409:	90                   	nop
+  40140a:	90                   	nop
+  40140b:	90                   	nop
+  40140c:	90                   	nop
+  40140d:	90                   	nop
+  40140e:	90                   	nop
+  40140f:	90                   	nop
+  401410:	90                   	nop
+  401411:	90                   	nop
+  401412:	90                   	nop
+  401413:	90                   	nop
+  401414:	90                   	nop
+  401415:	90                   	nop
+  401416:	90                   	nop
+  401417:	90                   	nop
+  401418:	90                   	nop
+  401419:	90                   	nop
+  40141a:	90                   	nop
+  40141b:	90                   	nop
+  40141c:	90                   	nop
+  40141d:	90                   	nop
+  40141e:	90                   	nop
+  40141f:	90                   	nop
+  401420:	90                   	nop
+  401421:	90                   	nop
+  401422:	90                   	nop
+  401423:	90                   	nop
+  401424:	90                   	nop
+  401425:	90                   	nop
+  401426:	90                   	nop
+  401427:	90                   	nop
+  401428:	90                   	nop
+  401429:	90                   	nop
+  40142a:	90                   	nop
+  40142b:	90                   	nop
+  40142c:	90                   	nop
+  40142d:	90                   	nop
+  40142e:	90                   	nop
+  40142f:	90                   	nop
+  401430:	90                   	nop
+  401431:	90                   	nop
+  401432:	90                   	nop
+  401433:	90                   	nop
+  401434:	90                   	nop
+  401435:	90                   	nop
+  401436:	90                   	nop
+  401437:	90                   	nop
+  401438:	90                   	nop
+  401439:	90                   	nop
+  40143a:	90                   	nop
+  40143b:	90                   	nop
+  40143c:	90                   	nop
+  40143d:	90                   	nop
+  40143e:	90                   	nop
+  40143f:	90                   	nop
+  401440:	90                   	nop
+  401441:	90                   	nop
+  401442:	90                   	nop
+  401443:	90                   	nop
+  401444:	90                   	nop
+  401445:	90                   	nop
+  401446:	90                   	nop
+  401447:	90                   	nop
+  401448:	90                   	nop
+  401449:	90                   	nop
+  40144a:	90                   	nop
+  40144b:	90                   	nop
+  40144c:	90                   	nop
+  40144d:	90                   	nop
+  40144e:	90                   	nop
+  40144f:	90                   	nop
+  401450:	90                   	nop
+  401451:	90                   	nop
+  401452:	90                   	nop
+  401453:	90                   	nop
+  401454:	90                   	nop
+  401455:	90                   	nop
+  401456:	90                   	nop
+  401457:	90                   	nop
+  401458:	90                   	nop
+  401459:	90                   	nop
+  40145a:	90                   	nop
+  40145b:	90                   	nop
+  40145c:	90                   	nop
+  40145d:	90                   	nop
+  40145e:	90                   	nop
+  40145f:	90                   	nop
+  401460:	90                   	nop
+  401461:	90                   	nop
+  401462:	90                   	nop
+  401463:	90                   	nop
+  401464:	90                   	nop
+  401465:	90                   	nop
+  401466:	90                   	nop
+  401467:	90                   	nop
+  401468:	90                   	nop
+  401469:	90                   	nop
+  40146a:	90                   	nop
+  40146b:	90                   	nop
+  40146c:	90                   	nop
+  40146d:	90                   	nop
+  40146e:	90                   	nop
+  40146f:	90                   	nop
+  401470:	90                   	nop
+  401471:	90                   	nop
+  401472:	90                   	nop
+  401473:	90                   	nop
+  401474:	90                   	nop
+  401475:	90                   	nop
+  401476:	90                   	nop
+  401477:	90                   	nop
+  401478:	90                   	nop
+  401479:	90                   	nop
+  40147a:	90                   	nop
+  40147b:	90                   	nop
+  40147c:	90                   	nop
+  40147d:	90                   	nop
+  40147e:	90                   	nop
+  40147f:	90                   	nop
+  401480:	90                   	nop
+  401481:	90                   	nop
+  401482:	90                   	nop
+  401483:	90                   	nop
+  401484:	90                   	nop
+  401485:	90                   	nop
+  401486:	90                   	nop
+  401487:	90                   	nop
+  401488:	90                   	nop
+  401489:	90                   	nop
+  40148a:	90                   	nop
+  40148b:	90                   	nop
+  40148c:	90                   	nop
+  40148d:	90                   	nop
+  40148e:	90                   	nop
+  40148f:	90                   	nop
+  401490:	90                   	nop
+  401491:	90                   	nop
+  401492:	90                   	nop
+  401493:	90                   	nop
+  401494:	90                   	nop
+  401495:	90                   	nop
+  401496:	90                   	nop
+  401497:	90                   	nop
+  401498:	90                   	nop
+  401499:	90                   	nop
+  40149a:	90                   	nop
+  40149b:	90                   	nop
+  40149c:	90                   	nop
+  40149d:	90                   	nop
+  40149e:	90                   	nop
+  40149f:	90                   	nop
+  4014a0:	90                   	nop
+  4014a1:	90                   	nop
+  4014a2:	90                   	nop
+  4014a3:	90                   	nop
+  4014a4:	90                   	nop
+  4014a5:	90                   	nop
+  4014a6:	90                   	nop
+  4014a7:	90                   	nop
+  4014a8:	90                   	nop
+  4014a9:	90                   	nop
+  4014aa:	90                   	nop
+  4014ab:	90                   	nop
+  4014ac:	90                   	nop
+  4014ad:	90                   	nop
+  4014ae:	90                   	nop
+  4014af:	90                   	nop
+  4014b0:	90                   	nop
+  4014b1:	90                   	nop
+  4014b2:	90                   	nop
+  4014b3:	90                   	nop
+  4014b4:	90                   	nop
+  4014b5:	90                   	nop
+  4014b6:	90                   	nop
+  4014b7:	90                   	nop
+  4014b8:	90                   	nop
+  4014b9:	90                   	nop
+  4014ba:	90                   	nop
+  4014bb:	90                   	nop
+  4014bc:	90                   	nop
+  4014bd:	90                   	nop
+  4014be:	90                   	nop
+  4014bf:	90                   	nop
+  4014c0:	90                   	nop
+  4014c1:	90                   	nop
+  4014c2:	90                   	nop
+  4014c3:	90                   	nop
+  4014c4:	90                   	nop
+  4014c5:	90                   	nop
+  4014c6:	90                   	nop
+  4014c7:	90                   	nop
+  4014c8:	90                   	nop
+  4014c9:	90                   	nop
+  4014ca:	90                   	nop
+  4014cb:	90                   	nop
+  4014cc:	90                   	nop
+  4014cd:	90                   	nop
+  4014ce:	90                   	nop
+  4014cf:	90                   	nop
+  4014d0:	90                   	nop
+  4014d1:	90                   	nop
+  4014d2:	90                   	nop
+  4014d3:	90                   	nop
+  4014d4:	90                   	nop
+  4014d5:	90                   	nop
+  4014d6:	90                   	nop
+  4014d7:	90                   	nop
+  4014d8:	90                   	nop
+  4014d9:	90                   	nop
+  4014da:	90                   	nop
+  4014db:	90                   	nop
+  4014dc:	90                   	nop
+  4014dd:	90                   	nop
+  4014de:	90                   	nop
+  4014df:	90                   	nop
+  4014e0:	90                   	nop
+  4014e1:	90                   	nop
+  4014e2:	90                   	nop
+  4014e3:	90                   	nop
+  4014e4:	90                   	nop
+  4014e5:	90                   	nop
+  4014e6:	90                   	nop
+  4014e7:	90                   	nop
+  4014e8:	90                   	nop
+  4014e9:	90                   	nop
+  4014ea:	90                   	nop
+  4014eb:	90                   	nop
+  4014ec:	90                   	nop
+  4014ed:	90                   	nop
+  4014ee:	90                   	nop
+  4014ef:	90                   	nop
+  4014f0:	90                   	nop
+  4014f1:	90                   	nop
+  4014f2:	90                   	nop
+  4014f3:	90                   	nop
+  4014f4:	90                   	nop
+  4014f5:	90                   	nop
+  4014f6:	90                   	nop
+  4014f7:	90                   	nop
+  4014f8:	90                   	nop
+  4014f9:	90                   	nop
+  4014fa:	90                   	nop
+  4014fb:	90                   	nop
+  4014fc:	90                   	nop
+  4014fd:	90                   	nop
+  4014fe:	90                   	nop
+  4014ff:	90                   	nop
+  401500:	90                   	nop
+  401501:	90                   	nop
+  401502:	90                   	nop
+  401503:	90                   	nop
+  401504:	90                   	nop
+  401505:	90                   	nop
+  401506:	90                   	nop
+  401507:	90                   	nop
+  401508:	90                   	nop
+  401509:	90                   	nop
+  40150a:	90                   	nop
+  40150b:	90                   	nop
+  40150c:	90                   	nop
+  40150d:	90                   	nop
+  40150e:	90                   	nop
+  40150f:	90                   	nop
+  401510:	90                   	nop
+  401511:	90                   	nop
+  401512:	90                   	nop
+  401513:	90                   	nop
+  401514:	90                   	nop
+  401515:	90                   	nop
+  401516:	90                   	nop
+  401517:	90                   	nop
+  401518:	90                   	nop
+  401519:	90                   	nop
+  40151a:	90                   	nop
+  40151b:	90                   	nop
+  40151c:	90                   	nop
+  40151d:	90                   	nop
+  40151e:	90                   	nop
+  40151f:	90                   	nop
+  401520:	90                   	nop
+  401521:	90                   	nop
+  401522:	90                   	nop
+  401523:	90                   	nop
+  401524:	90                   	nop
+  401525:	90                   	nop
+  401526:	90                   	nop
+  401527:	90                   	nop
+  401528:	90                   	nop
+  401529:	90                   	nop
+  40152a:	90                   	nop
+  40152b:	90                   	nop
+  40152c:	90                   	nop
+  40152d:	90                   	nop
+  40152e:	90                   	nop
+  40152f:	90                   	nop
+  401530:	90                   	nop
+  401531:	90                   	nop
+  401532:	90                   	nop
+  401533:	90                   	nop
+  401534:	90                   	nop
+  401535:	90                   	nop
+  401536:	90                   	nop
+  401537:	90                   	nop
+  401538:	90                   	nop
+  401539:	90                   	nop
+  40153a:	90                   	nop
+  40153b:	90                   	nop
+  40153c:	90                   	nop
+  40153d:	90                   	nop
+  40153e:	90                   	nop
+  40153f:	90                   	nop
+  401540:	90                   	nop
+  401541:	90                   	nop
+  401542:	90                   	nop
+  401543:	90                   	nop
+  401544:	90                   	nop
+  401545:	90                   	nop
+  401546:	90                   	nop
+  401547:	90                   	nop
+  401548:	90                   	nop
+  401549:	90                   	nop
+  40154a:	90                   	nop
+  40154b:	90                   	nop
+  40154c:	90                   	nop
+  40154d:	90                   	nop
+  40154e:	90                   	nop
+  40154f:	90                   	nop
+  401550:	90                   	nop
+  401551:	90                   	nop
+  401552:	90                   	nop
+  401553:	90                   	nop
+  401554:	90                   	nop
+  401555:	90                   	nop
+  401556:	90                   	nop
+  401557:	90                   	nop
+  401558:	90                   	nop
+  401559:	90                   	nop
+  40155a:	90                   	nop
+  40155b:	90                   	nop
+  40155c:	90                   	nop
+  40155d:	90                   	nop
+  40155e:	90                   	nop
+  40155f:	90                   	nop
+  401560:	90                   	nop
+  401561:	90                   	nop
+  401562:	90                   	nop
+  401563:	90                   	nop
+  401564:	90                   	nop
+  401565:	90                   	nop
+  401566:	90                   	nop
+  401567:	90                   	nop
+  401568:	90                   	nop
+  401569:	90                   	nop
+  40156a:	90                   	nop
+  40156b:	90                   	nop
+  40156c:	90                   	nop
+  40156d:	90                   	nop
+  40156e:	90                   	nop
+  40156f:	90                   	nop
+  401570:	90                   	nop
+  401571:	90                   	nop
+  401572:	90                   	nop
+  401573:	90                   	nop
+  401574:	90                   	nop
+  401575:	90                   	nop
+  401576:	90                   	nop
+  401577:	90                   	nop
+  401578:	90                   	nop
+  401579:	90                   	nop
+  40157a:	90                   	nop
+  40157b:	90                   	nop
+  40157c:	90                   	nop
+  40157d:	90                   	nop
+  40157e:	90                   	nop
+  40157f:	90                   	nop
+  401580:	90                   	nop
+  401581:	90                   	nop
+  401582:	90                   	nop
+  401583:	90                   	nop
+  401584:	90                   	nop
+  401585:	90                   	nop
+  401586:	90                   	nop
+  401587:	90                   	nop
+  401588:	90                   	nop
+  401589:	90                   	nop
+  40158a:	90                   	nop
+  40158b:	90                   	nop
+  40158c:	90                   	nop
+  40158d:	90                   	nop
+  40158e:	90                   	nop
+  40158f:	90                   	nop
+  401590:	90                   	nop
+  401591:	90                   	nop
+  401592:	90                   	nop
+  401593:	90                   	nop
+  401594:	90                   	nop
+  401595:	90                   	nop
+  401596:	90                   	nop
+  401597:	90                   	nop
+  401598:	90                   	nop
+  401599:	90                   	nop
+  40159a:	90                   	nop
+  40159b:	90                   	nop
+  40159c:	90                   	nop
+  40159d:	90                   	nop
+  40159e:	90                   	nop
+  40159f:	90                   	nop
+  4015a0:	90                   	nop
+  4015a1:	90                   	nop
+  4015a2:	90                   	nop
+  4015a3:	90                   	nop
+  4015a4:	90                   	nop
+  4015a5:	90                   	nop
+  4015a6:	90                   	nop
+  4015a7:	90                   	nop
+  4015a8:	90                   	nop
+  4015a9:	90                   	nop
+  4015aa:	90                   	nop
+  4015ab:	90                   	nop
+  4015ac:	90                   	nop
+  4015ad:	90                   	nop
+  4015ae:	90                   	nop
+  4015af:	90                   	nop
+  4015b0:	90                   	nop
+  4015b1:	90                   	nop
+  4015b2:	90                   	nop
+  4015b3:	90                   	nop
+  4015b4:	90                   	nop
+  4015b5:	90                   	nop
+  4015b6:	90                   	nop
+  4015b7:	90                   	nop
+  4015b8:	90                   	nop
+  4015b9:	90                   	nop
+  4015ba:	90                   	nop
+  4015bb:	90                   	nop
+  4015bc:	90                   	nop
+  4015bd:	90                   	nop
+  4015be:	90                   	nop
+  4015bf:	90                   	nop
+  4015c0:	90                   	nop
+  4015c1:	90                   	nop
+  4015c2:	90                   	nop
+  4015c3:	90                   	nop
+  4015c4:	90                   	nop
+  4015c5:	90                   	nop
+  4015c6:	90                   	nop
+  4015c7:	90                   	nop
+  4015c8:	90                   	nop
+  4015c9:	90                   	nop
+  4015ca:	90                   	nop
+  4015cb:	90                   	nop
+  4015cc:	90                   	nop
+  4015cd:	90                   	nop
+  4015ce:	90                   	nop
+  4015cf:	90                   	nop
+  4015d0:	90                   	nop
+  4015d1:	90                   	nop
+  4015d2:	90                   	nop
+  4015d3:	90                   	nop
+  4015d4:	90                   	nop
+  4015d5:	90                   	nop
+  4015d6:	90                   	nop
+  4015d7:	90                   	nop
+  4015d8:	90                   	nop
+  4015d9:	90                   	nop
+  4015da:	90                   	nop
+  4015db:	90                   	nop
+  4015dc:	90                   	nop
+  4015dd:	90                   	nop
+  4015de:	90                   	nop
+  4015df:	90                   	nop
+  4015e0:	90                   	nop
+  4015e1:	90                   	nop
+  4015e2:	90                   	nop
+  4015e3:	90                   	nop
+  4015e4:	90                   	nop
+  4015e5:	90                   	nop
+  4015e6:	90                   	nop
+  4015e7:	90                   	nop
+  4015e8:	90                   	nop
+  4015e9:	90                   	nop
+  4015ea:	90                   	nop
+  4015eb:	90                   	nop
+  4015ec:	90                   	nop
+  4015ed:	90                   	nop
+  4015ee:	90                   	nop
+  4015ef:	90                   	nop
+  4015f0:	90                   	nop
+  4015f1:	90                   	nop
+  4015f2:	90                   	nop
+  4015f3:	90                   	nop
+  4015f4:	90                   	nop
+  4015f5:	90                   	nop
+  4015f6:	90                   	nop
+  4015f7:	90                   	nop
+  4015f8:	90                   	nop
+  4015f9:	90                   	nop
+  4015fa:	90                   	nop
+  4015fb:	90                   	nop
+  4015fc:	90                   	nop
+  4015fd:	90                   	nop
+  4015fe:	90                   	nop
+  4015ff:	90                   	nop
+  401600:	90                   	nop
+  401601:	90                   	nop
+  401602:	90                   	nop
+  401603:	90                   	nop
+  401604:	90                   	nop
+  401605:	90                   	nop
+  401606:	90                   	nop
+  401607:	90                   	nop
+  401608:	90                   	nop
+  401609:	90                   	nop
+  40160a:	90                   	nop
+  40160b:	90                   	nop
+  40160c:	90                   	nop
+  40160d:	90                   	nop
+  40160e:	90                   	nop
+  40160f:	90                   	nop
+  401610:	90                   	nop
+  401611:	90                   	nop
+  401612:	90                   	nop
+  401613:	90                   	nop
+  401614:	90                   	nop
+  401615:	90                   	nop
+  401616:	90                   	nop
+  401617:	90                   	nop
+  401618:	90                   	nop
+  401619:	90                   	nop
+  40161a:	90                   	nop
+  40161b:	90                   	nop
+  40161c:	90                   	nop
+  40161d:	90                   	nop
+  40161e:	90                   	nop
+  40161f:	90                   	nop
+  401620:	90                   	nop
+  401621:	90                   	nop
+  401622:	90                   	nop
+  401623:	90                   	nop
+  401624:	90                   	nop
+  401625:	90                   	nop
+  401626:	90                   	nop
+  401627:	90                   	nop
+  401628:	90                   	nop
+  401629:	90                   	nop
+  40162a:	90                   	nop
+  40162b:	90                   	nop
+  40162c:	90                   	nop
+  40162d:	90                   	nop
+  40162e:	90                   	nop
+  40162f:	90                   	nop
+  401630:	90                   	nop
+  401631:	90                   	nop
+  401632:	90                   	nop
+  401633:	90                   	nop
+  401634:	90                   	nop
+  401635:	90                   	nop
+  401636:	90                   	nop
+  401637:	90                   	nop
+  401638:	90                   	nop
+  401639:	90                   	nop
+  40163a:	90                   	nop
+  40163b:	90                   	nop
+  40163c:	90                   	nop
+  40163d:	5d                   	pop    rbp
+  40163e:	c3                   	ret    
+
+000000000040163f <win>:
+  40163f:	          f3 0f 1e fa          	endbr64 
+  401643:	          55                   	push   rbp
+  401644:	          48 89 e5             	mov    rbp,rsp
+  401647:	          48 8d 3d ba 09 00 00 	lea    rdi,[rip+0x9ba]        # 402008 <_IO_stdin_used+0x8>
+  40164e:	          e8 cd fa ff ff       	call   401120 <puts@plt>
+  401653:	          be 00 00 00 00       	mov    esi,0x0
+  401658:	          48 8d 3d c5 09 00 00 	lea    rdi,[rip+0x9c5]        # 402024 <_IO_stdin_used+0x24>
+  40165f:	          b8 00 00 00 00       	mov    eax,0x0
+  401664:	          e8 27 fb ff ff       	call   401190 <open@plt>
+  401669:	          89 05 51 2a 00 00    	mov    DWORD PTR [rip+0x2a51],eax        # 4040c0 <flag_fd.5626>
+  40166f:	          8b 05 4b 2a 00 00    	mov    eax,DWORD PTR [rip+0x2a4b]        # 4040c0 <flag_fd.5626>
+  401675:	          85 c0                	test   eax,eax
+  401677:	      /-- 79 49                	jns    4016c2 <win+0x83>
+  401679:	      |   e8 92 fa ff ff       	call   401110 <__errno_location@plt>
+  40167e:	      |   8b 00                	mov    eax,DWORD PTR [rax]
+  401680:	      |   89 c7                	mov    edi,eax
+  401682:	      |   e8 39 fb ff ff       	call   4011c0 <strerror@plt>
+  401687:	      |   48 89 c6             	mov    rsi,rax
+  40168a:	      |   48 8d 3d 9f 09 00 00 	lea    rdi,[rip+0x99f]        # 402030 <_IO_stdin_used+0x30>
+  401691:	      |   b8 00 00 00 00       	mov    eax,0x0
+  401696:	      |   e8 a5 fa ff ff       	call   401140 <printf@plt>
+  40169b:	      |   e8 c0 fa ff ff       	call   401160 <geteuid@plt>
+  4016a0:	      |   85 c0                	test   eax,eax
+  4016a2:	/-----|-- 0f 84 91 00 00 00    	je     401739 <win+0xfa>
+  4016a8:	|     |   48 8d 3d b1 09 00 00 	lea    rdi,[rip+0x9b1]        # 402060 <_IO_stdin_used+0x60>
+  4016af:	|     |   e8 6c fa ff ff       	call   401120 <puts@plt>
+  4016b4:	|     |   48 8d 3d cd 09 00 00 	lea    rdi,[rip+0x9cd]        # 402088 <_IO_stdin_used+0x88>
+  4016bb:	|     |   e8 60 fa ff ff       	call   401120 <puts@plt>
+  4016c0:	+-----|-- eb 77                	jmp    401739 <win+0xfa>
+  4016c2:	|     \-> 8b 05 f8 29 00 00    	mov    eax,DWORD PTR [rip+0x29f8]        # 4040c0 <flag_fd.5626>
+  4016c8:	|         ba 00 01 00 00       	mov    edx,0x100
+  4016cd:	|         48 8d 35 0c 2a 00 00 	lea    rsi,[rip+0x2a0c]        # 4040e0 <flag.5625>
+  4016d4:	|         89 c7                	mov    edi,eax
+  4016d6:	|         e8 95 fa ff ff       	call   401170 <read@plt>
+  4016db:	|         89 05 ff 2a 00 00    	mov    DWORD PTR [rip+0x2aff],eax        # 4041e0 <flag_length.5627>
+  4016e1:	|         8b 05 f9 2a 00 00    	mov    eax,DWORD PTR [rip+0x2af9]        # 4041e0 <flag_length.5627>
+  4016e7:	|         85 c0                	test   eax,eax
+  4016e9:	|     /-- 7f 24                	jg     40170f <win+0xd0>
+  4016eb:	|     |   e8 20 fa ff ff       	call   401110 <__errno_location@plt>
+  4016f0:	|     |   8b 00                	mov    eax,DWORD PTR [rax]
+  4016f2:	|     |   89 c7                	mov    edi,eax
+  4016f4:	|     |   e8 c7 fa ff ff       	call   4011c0 <strerror@plt>
+  4016f9:	|     |   48 89 c6             	mov    rsi,rax
+  4016fc:	|     |   48 8d 3d dd 09 00 00 	lea    rdi,[rip+0x9dd]        # 4020e0 <_IO_stdin_used+0xe0>
+  401703:	|     |   b8 00 00 00 00       	mov    eax,0x0
+  401708:	|     |   e8 33 fa ff ff       	call   401140 <printf@plt>
+  40170d:	|  /--|-- eb 2b                	jmp    40173a <win+0xfb>
+  40170f:	|  |  \-> 8b 05 cb 2a 00 00    	mov    eax,DWORD PTR [rip+0x2acb]        # 4041e0 <flag_length.5627>
+  401715:	|  |      48 98                	cdqe   
+  401717:	|  |      48 89 c2             	mov    rdx,rax
+  40171a:	|  |      48 8d 35 bf 29 00 00 	lea    rsi,[rip+0x29bf]        # 4040e0 <flag.5625>
+  401721:	|  |      bf 01 00 00 00       	mov    edi,0x1
+  401726:	|  |      e8 05 fa ff ff       	call   401130 <write@plt>
+  40172b:	|  |      48 8d 3d d8 09 00 00 	lea    rdi,[rip+0x9d8]        # 40210a <_IO_stdin_used+0x10a>
+  401732:	|  |      e8 e9 f9 ff ff       	call   401120 <puts@plt>
+  401737:	|  +----- eb 01                	jmp    40173a <win+0xfb>
+  401739:	\--|----> 90                   	nop
+  40173a:	   \----> 5d                   	pop    rbp
+  40173b:	          c3                   	ret    
+
+000000000040173c <challenge>:
+  40173c:	    f3 0f 1e fa          	endbr64 
+  401740:	    55                   	push   rbp
+  401741:	    48 89 e5             	mov    rbp,rsp
+  401744:	    48 81 ec 90 00 00 00 	sub    rsp,0x90
+  40174b:	    89 7d 8c             	mov    DWORD PTR [rbp-0x74],edi
+  40174e:	    48 89 75 80          	mov    QWORD PTR [rbp-0x80],rsi
+  401752:	    48 89 95 78 ff ff ff 	mov    QWORD PTR [rbp-0x88],rdx
+  401759:	    48 c7 45 a0 00 00 00 	mov    QWORD PTR [rbp-0x60],0x0
+  401760:	00 
+  401761:	    48 c7 45 a8 00 00 00 	mov    QWORD PTR [rbp-0x58],0x0
+  401768:	00 
+  401769:	    48 c7 45 b0 00 00 00 	mov    QWORD PTR [rbp-0x50],0x0
+  401770:	00 
+  401771:	    48 c7 45 b8 00 00 00 	mov    QWORD PTR [rbp-0x48],0x0
+  401778:	00 
+  401779:	    48 c7 45 c0 00 00 00 	mov    QWORD PTR [rbp-0x40],0x0
+  401780:	00 
+  401781:	    48 c7 45 c8 00 00 00 	mov    QWORD PTR [rbp-0x38],0x0
+  401788:	00 
+  401789:	    48 c7 45 d0 00 00 00 	mov    QWORD PTR [rbp-0x30],0x0
+  401790:	00 
+  401791:	    c7 45 d8 00 00 00 00 	mov    DWORD PTR [rbp-0x28],0x0
+  401798:	    66 c7 45 dc 00 00    	mov    WORD PTR [rbp-0x24],0x0
+  40179e:	    48 8d 45 a0          	lea    rax,[rbp-0x60]
+  4017a2:	    48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+  4017a6:	    48 c7 45 f0 00 00 00 	mov    QWORD PTR [rbp-0x10],0x0
+  4017ad:	00 
+  4017ae:	    48 8d 3d 5b 09 00 00 	lea    rdi,[rip+0x95b]        # 402110 <_IO_stdin_used+0x110>
+  4017b5:	    b8 00 00 00 00       	mov    eax,0x0
+  4017ba:	    e8 81 f9 ff ff       	call   401140 <printf@plt>
+  4017bf:	    48 8d 45 9c          	lea    rax,[rbp-0x64]
+  4017c3:	    48 89 c6             	mov    rsi,rax
+  4017c6:	    48 8d 3d 67 09 00 00 	lea    rdi,[rip+0x967]        # 402134 <_IO_stdin_used+0x134>
+  4017cd:	    b8 00 00 00 00       	mov    eax,0x0
+  4017d2:	    e8 c9 f9 ff ff       	call   4011a0 <__isoc99_scanf@plt>
+  4017d7:	    8b 45 9c             	mov    eax,DWORD PTR [rbp-0x64]
+  4017da:	    85 c0                	test   eax,eax
+  4017dc:	/-- 75 1f                	jne    4017fd <challenge+0xc1>
+  4017de:	|   48 8d 0d 4b 0a 00 00 	lea    rcx,[rip+0xa4b]        # 402230 <__PRETTY_FUNCTION__.5640>
+  4017e5:	|   ba 45 00 00 00       	mov    edx,0x45
+  4017ea:	|   48 8d 35 46 09 00 00 	lea    rsi,[rip+0x946]        # 402137 <_IO_stdin_used+0x137>
+  4017f1:	|   48 8d 3d 47 09 00 00 	lea    rdi,[rip+0x947]        # 40213f <_IO_stdin_used+0x13f>
+  4017f8:	|   e8 53 f9 ff ff       	call   401150 <__assert_fail@plt>
+  4017fd:	\-> 48 8d 3d 4a 09 00 00 	lea    rdi,[rip+0x94a]        # 40214e <_IO_stdin_used+0x14e>
+  401804:	    b8 00 00 00 00       	mov    eax,0x0
+  401809:	    e8 32 f9 ff ff       	call   401140 <printf@plt>
+  40180e:	    48 8d 45 98          	lea    rax,[rbp-0x68]
+  401812:	    48 89 c6             	mov    rsi,rax
+  401815:	    48 8d 3d 18 09 00 00 	lea    rdi,[rip+0x918]        # 402134 <_IO_stdin_used+0x134>
+  40181c:	    b8 00 00 00 00       	mov    eax,0x0
+  401821:	    e8 7a f9 ff ff       	call   4011a0 <__isoc99_scanf@plt>
+  401826:	    8b 45 98             	mov    eax,DWORD PTR [rbp-0x68]
+  401829:	    85 c0                	test   eax,eax
+  40182b:	/-- 75 1f                	jne    40184c <challenge+0x110>
+  40182d:	|   48 8d 0d fc 09 00 00 	lea    rcx,[rip+0x9fc]        # 402230 <__PRETTY_FUNCTION__.5640>
+  401834:	|   ba 48 00 00 00       	mov    edx,0x48
+  401839:	|   48 8d 35 f7 08 00 00 	lea    rsi,[rip+0x8f7]        # 402137 <_IO_stdin_used+0x137>
+  401840:	|   48 8d 3d 25 09 00 00 	lea    rdi,[rip+0x925]        # 40216c <_IO_stdin_used+0x16c>
+  401847:	|   e8 04 f9 ff ff       	call   401150 <__assert_fail@plt>
+  40184c:	\-> 8b 55 98             	mov    edx,DWORD PTR [rbp-0x68]
+  40184f:	    8b 45 9c             	mov    eax,DWORD PTR [rbp-0x64]
+  401852:	    0f af c2             	imul   eax,edx
+  401855:	    83 f8 07             	cmp    eax,0x7
+  401858:	/-- 76 1f                	jbe    401879 <challenge+0x13d>
+  40185a:	|   48 8d 0d cf 09 00 00 	lea    rcx,[rip+0x9cf]        # 402230 <__PRETTY_FUNCTION__.5640>
+  401861:	|   ba 49 00 00 00       	mov    edx,0x49
+  401866:	|   48 8d 35 ca 08 00 00 	lea    rsi,[rip+0x8ca]        # 402137 <_IO_stdin_used+0x137>
+  40186d:	|   48 8d 3d 0c 09 00 00 	lea    rdi,[rip+0x90c]        # 402180 <_IO_stdin_used+0x180>
+  401874:	|   e8 d7 f8 ff ff       	call   401150 <__assert_fail@plt>
+  401879:	\-> 8b 45 9c             	mov    eax,DWORD PTR [rbp-0x64]
+  40187c:	    89 c0                	mov    eax,eax
+  40187e:	    48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+  401882:	    8b 45 98             	mov    eax,DWORD PTR [rbp-0x68]
+  401885:	    89 c2                	mov    edx,eax
+  401887:	    48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  40188b:	    48 0f af c2          	imul   rax,rdx
+  40188f:	    48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+  401893:	    48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  401897:	    48 89 c6             	mov    rsi,rax
+  40189a:	    48 8d 3d 17 09 00 00 	lea    rdi,[rip+0x917]        # 4021b8 <_IO_stdin_used+0x1b8>
+  4018a1:	    b8 00 00 00 00       	mov    eax,0x0
+  4018a6:	    e8 95 f8 ff ff       	call   401140 <printf@plt>
+  4018ab:	    48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  4018af:	    48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4018b3:	    48 89 c6             	mov    rsi,rax
+  4018b6:	    bf 00 00 00 00       	mov    edi,0x0
+  4018bb:	    e8 b0 f8 ff ff       	call   401170 <read@plt>
+  4018c0:	    89 45 ec             	mov    DWORD PTR [rbp-0x14],eax
+  4018c3:	    83 7d ec 00          	cmp    DWORD PTR [rbp-0x14],0x0
+  4018c7:	/-- 79 2c                	jns    4018f5 <challenge+0x1b9>
+  4018c9:	|   e8 42 f8 ff ff       	call   401110 <__errno_location@plt>
+  4018ce:	|   8b 00                	mov    eax,DWORD PTR [rax]
+  4018d0:	|   89 c7                	mov    edi,eax
+  4018d2:	|   e8 e9 f8 ff ff       	call   4011c0 <strerror@plt>
+  4018d7:	|   48 89 c6             	mov    rsi,rax
+  4018da:	|   48 8d 3d ff 08 00 00 	lea    rdi,[rip+0x8ff]        # 4021e0 <_IO_stdin_used+0x1e0>
+  4018e1:	|   b8 00 00 00 00       	mov    eax,0x0
+  4018e6:	|   e8 55 f8 ff ff       	call   401140 <printf@plt>
+  4018eb:	|   bf 01 00 00 00       	mov    edi,0x1
+  4018f0:	|   e8 bb f8 ff ff       	call   4011b0 <exit@plt>
+  4018f5:	\-> 48 8d 3d 08 09 00 00 	lea    rdi,[rip+0x908]        # 402204 <_IO_stdin_used+0x204>
+  4018fc:	    e8 1f f8 ff ff       	call   401120 <puts@plt>
+  401901:	    b8 00 00 00 00       	mov    eax,0x0
+  401906:	    c9                   	leave  
+  401907:	    c3                   	ret    
+
+0000000000401908 <main>:
+  401908:	    f3 0f 1e fa          	endbr64 
+  40190c:	    55                   	push   rbp
+  40190d:	    48 89 e5             	mov    rbp,rsp
+  401910:	    48 81 ec 00 10 00 00 	sub    rsp,0x1000
+  401917:	    48 83 0c 24 00       	or     QWORD PTR [rsp],0x0
+  40191c:	    48 83 ec 20          	sub    rsp,0x20
+  401920:	    89 bd fc ef ff ff    	mov    DWORD PTR [rbp-0x1004],edi
+  401926:	    48 89 b5 f0 ef ff ff 	mov    QWORD PTR [rbp-0x1010],rsi
+  40192d:	    48 89 95 e8 ef ff ff 	mov    QWORD PTR [rbp-0x1018],rdx
+  401934:	    83 bd fc ef ff ff 00 	cmp    DWORD PTR [rbp-0x1004],0x0
+  40193b:	/-- 7f 1f                	jg     40195c <main+0x54>
+  40193d:	|   48 8d 0d f6 08 00 00 	lea    rcx,[rip+0x8f6]        # 40223a <__PRETTY_FUNCTION__.5647>
+  401944:	|   ba 5c 00 00 00       	mov    edx,0x5c
+  401949:	|   48 8d 35 e7 07 00 00 	lea    rsi,[rip+0x7e7]        # 402137 <_IO_stdin_used+0x137>
+  401950:	|   48 8d 3d b6 08 00 00 	lea    rdi,[rip+0x8b6]        # 40220d <_IO_stdin_used+0x20d>
+  401957:	|   e8 f4 f7 ff ff       	call   401150 <__assert_fail@plt>
+  40195c:	\-> 48 8d 3d b3 08 00 00 	lea    rdi,[rip+0x8b3]        # 402216 <_IO_stdin_used+0x216>
+  401963:	    e8 b8 f7 ff ff       	call   401120 <puts@plt>
+  401968:	    48 8b 85 f0 ef ff ff 	mov    rax,QWORD PTR [rbp-0x1010]
+  40196f:	    48 8b 00             	mov    rax,QWORD PTR [rax]
+  401972:	    48 89 c6             	mov    rsi,rax
+  401975:	    48 8d 3d 9e 08 00 00 	lea    rdi,[rip+0x89e]        # 40221a <_IO_stdin_used+0x21a>
+  40197c:	    b8 00 00 00 00       	mov    eax,0x0
+  401981:	    e8 ba f7 ff ff       	call   401140 <printf@plt>
+  401986:	    48 8d 3d 89 08 00 00 	lea    rdi,[rip+0x889]        # 402216 <_IO_stdin_used+0x216>
+  40198d:	    e8 8e f7 ff ff       	call   401120 <puts@plt>
+  401992:	    bf 0a 00 00 00       	mov    edi,0xa
+  401997:	    e8 64 f7 ff ff       	call   401100 <putchar@plt>
+  40199c:	    48 8b 05 0d 27 00 00 	mov    rax,QWORD PTR [rip+0x270d]        # 4040b0 <stdin@@GLIBC_2.2.5>
+  4019a3:	    b9 00 00 00 00       	mov    ecx,0x0
+  4019a8:	    ba 02 00 00 00       	mov    edx,0x2
+  4019ad:	    be 00 00 00 00       	mov    esi,0x0
+  4019b2:	    48 89 c7             	mov    rdi,rax
+  4019b5:	    e8 c6 f7 ff ff       	call   401180 <setvbuf@plt>
+  4019ba:	    48 8b 05 df 26 00 00 	mov    rax,QWORD PTR [rip+0x26df]        # 4040a0 <stdout@@GLIBC_2.2.5>
+  4019c1:	    b9 01 00 00 00       	mov    ecx,0x1
+  4019c6:	    ba 02 00 00 00       	mov    edx,0x2
+  4019cb:	    be 00 00 00 00       	mov    esi,0x0
+  4019d0:	    48 89 c7             	mov    rdi,rax
+  4019d3:	    e8 a8 f7 ff ff       	call   401180 <setvbuf@plt>
+  4019d8:	    48 8b 95 e8 ef ff ff 	mov    rdx,QWORD PTR [rbp-0x1018]
+  4019df:	    48 8b 8d f0 ef ff ff 	mov    rcx,QWORD PTR [rbp-0x1010]
+  4019e6:	    8b 85 fc ef ff ff    	mov    eax,DWORD PTR [rbp-0x1004]
+  4019ec:	    48 89 ce             	mov    rsi,rcx
+  4019ef:	    89 c7                	mov    edi,eax
+  4019f1:	    e8 46 fd ff ff       	call   40173c <challenge>
+  4019f6:	    c9                   	leave  
+  4019f7:	    c3                   	ret    
+  4019f8:	    0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  4019ff:	00 
+
+0000000000401a00 <__libc_csu_init>:
+  401a00:	       f3 0f 1e fa          	endbr64 
+  401a04:	       41 57                	push   r15
+  401a06:	       4c 8d 3d 03 24 00 00 	lea    r15,[rip+0x2403]        # 403e10 <__frame_dummy_init_array_entry>
+  401a0d:	       41 56                	push   r14
+  401a0f:	       49 89 d6             	mov    r14,rdx
+  401a12:	       41 55                	push   r13
+  401a14:	       49 89 f5             	mov    r13,rsi
+  401a17:	       41 54                	push   r12
+  401a19:	       41 89 fc             	mov    r12d,edi
+  401a1c:	       55                   	push   rbp
+  401a1d:	       48 8d 2d f4 23 00 00 	lea    rbp,[rip+0x23f4]        # 403e18 <__do_global_dtors_aux_fini_array_entry>
+  401a24:	       53                   	push   rbx
+  401a25:	       4c 29 fd             	sub    rbp,r15
+  401a28:	       48 83 ec 08          	sub    rsp,0x8
+  401a2c:	       e8 cf f5 ff ff       	call   401000 <_init>
+  401a31:	       48 c1 fd 03          	sar    rbp,0x3
+  401a35:	/----- 74 1f                	je     401a56 <__libc_csu_init+0x56>
+  401a37:	|      31 db                	xor    ebx,ebx
+  401a39:	|      0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+  401a40:	|  /-> 4c 89 f2             	mov    rdx,r14
+  401a43:	|  |   4c 89 ee             	mov    rsi,r13
+  401a46:	|  |   44 89 e7             	mov    edi,r12d
+  401a49:	|  |   41 ff 14 df          	call   QWORD PTR [r15+rbx*8]
+  401a4d:	|  |   48 83 c3 01          	add    rbx,0x1
+  401a51:	|  |   48 39 dd             	cmp    rbp,rbx
+  401a54:	|  \-- 75 ea                	jne    401a40 <__libc_csu_init+0x40>
+  401a56:	\----> 48 83 c4 08          	add    rsp,0x8
+  401a5a:	       5b                   	pop    rbx
+  401a5b:	       5d                   	pop    rbp
+  401a5c:	       41 5c                	pop    r12
+  401a5e:	       41 5d                	pop    r13
+  401a60:	       41 5e                	pop    r14
+  401a62:	       41 5f                	pop    r15
+  401a64:	       c3                   	ret    
+  401a65:	       66 66 2e 0f 1f 84 00 	data16 nop WORD PTR cs:[rax+rax*1+0x0]
+  401a6c:	00 00 00 00 
+
+0000000000401a70 <__libc_csu_fini>:
+  401a70:	f3 0f 1e fa          	endbr64 
+  401a74:	c3                   	ret    
+
+Disassembly of section .fini:
+
+0000000000401a78 <_fini>:
+  401a78:	f3 0f 1e fa          	endbr64 
+  401a7c:	48 83 ec 08          	sub    rsp,0x8
+  401a80:	48 83 c4 08          	add    rsp,0x8
+  401a84:	c3                   	ret    

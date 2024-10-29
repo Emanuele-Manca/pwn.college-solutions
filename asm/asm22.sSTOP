@@ -1,0 +1,31 @@
+.intel_syntax noprefix
+
+.section .text
+    xor rax, rax      
+    mov rdx, rdi
+    mov r13, 0x403000
+    cmp rdx, 0
+    je end
+    
+lab3:           
+    cmp       byte ptr [rdx], 0
+    je        end
+    cmp       byte ptr [rdx], 0x5a
+    jle       lab2
+    inc       rdx
+    jmp       lab3
+    
+lab2:
+    mov       dil, [rdx]
+    mov       r12, rax
+    call      r13
+    mov       [rdx], al
+    mov       rax, r12
+
+lab1:
+    inc       rax
+    inc       rdx
+    jmp       lab3
+end:
+    nop
+    ret
